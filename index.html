@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+  </head>
+  <body>
+    <input id="addtask" type="button" value="add" />
+    <form id="addform" hidden>
+      <input id="addtaskip" type="text" id="todo" placeholder="enter task" />
+      <input id="addtaskclr" type="button" value="cansel" />
+      <input id="addtaskbtn" onclick="addTask()" type="button" value="add" />
+    </form>
+    <ul id="tasklist" style="list-style-type: none">
+      <li class="task" id="tsk4">
+        hi<button onclick="del(this.id)" class="delbtn" id="tsk4">
+          Delete
+        </button>
+      </li>
+    </ul>
+    <script src="todo.js"></script>
+  </body>
+</html>
