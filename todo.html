@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="todo.css" />
+    <link rel="stylesheet" href="index_media_css.css" />
+  </head>
+  <body
+    style="
+      background-image: url('https://wallpapercave.com/wp/wp12818169.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 100vh;
+      margin: 0;
+    ">
+    <nav class="navbar navbar-expand-lg justify-content-center">
+      <a class="navbar-brand" id="greeting" style="font-size: 3.5rem"></a>
+    </nav>
+
+    <div style="display: flex; justify-content: center; align-items: center">
+      <button
+        type="button"
+        id="addtask"
+        class="btn btn-primary btn-lg btn-block"
+        style="max-width: 400px; width: 100%">
+        Add a Task for yourself
+      </button>
+    </div>
+
+    <form
+      class="row g-2"
+      id="addform"
+      hidden
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px !important;
+      ">
+      <input
+        class="form-control transparent-input"
+        style="margin-top: 10px !important; width: 25%; color: antiquewhite"
+        id="addtaskip"
+        type="text"
+        id="todo"
+        placeholder="enter task" />
+
+      <input
+        class="form-control transparent-input"
+        id="addtaskbtn"
+        style="margin-top: 10px !important; width: 25%"
+        onclick="addTask()"
+        type="button"
+        value="Add" />
+
+      <input
+        class="form-control transparent-input"
+        id="addtaskclr"
+        style="margin-top: 10px !important; width: 25%"
+        onclick="hide()"
+        type="button"
+        value="Cancel" />
+    </form>
+
+    <ul
+      class="justify-content-center"
+      id="tasklist"
+      style="
+        margin-top: 50px !important;
+        list-style-type: none;
+        color: aqua;
+        max-width: 400px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      ">
+      <h4
+        id="tasklist-heading"
+        style="
+          color: aqua;
+          display: none;
+          text-align: center;
+          margin-bottom: 15px !important;
+        ">
+        Hey, check out the things to do....
+      </h4>
+    </ul>
+    <script src="todo.js"></script>
+  </body>
+</html>

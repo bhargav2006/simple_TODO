@@ -3,22 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo</title>
+    <title>TODO</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="index_media_css" />
+
+    <style>
+      html,
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
   </head>
-  <body>
-    <input id="addtask" type="button" value="add" />
-    <form id="addform" hidden>
-      <input id="addtaskip" type="text" id="todo" placeholder="enter task" />
-      <input id="addtaskclr" type="button" value="cansel" />
-      <input id="addtaskbtn" onclick="addTask()" type="button" value="add" />
+  <body
+    style="
+      background-image: url('https://res.allmacwallpaper.com/get/Retina-MacBook-Air-13-inch-wallpapers/lava-abstract-formation-8k-2560x1600/23136-11.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 100vh;
+      margin: 0;
+    ">
+    <nav class="navbar navbar-expand-lg justify-content-center">
+      <a class="navbar-brand mx-auto" href="#" style="font-size: 3.5rem">
+        Hello,
+      </a>
+    </nav>
+    <p
+      style="
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        color: #5d7d9e;
+        text-align: center;
+      ">
+      Enter your name:
+    </p>
+    <form
+      class="row g-2"
+      id="nameform"
+      action="todo.html"
+      method="get"
+      onsubmit="naming()"
+      style="justify-content: center">
+      <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Password</label>
+        <input
+          type="text"
+          class="form-control"
+          id="uname"
+          placeholder="Enter your name" />
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Let's Go</button>
+      </div>
+      <script>
+        function naming() {
+          const uname = document.getElementById("uname").value;
+          localStorage.setItem("username", uname);
+          console.log(uname);
+        }
+      </script>
     </form>
-    <ul id="tasklist" style="list-style-type: none">
-      <li class="task" id="tsk4">
-        hi<button onclick="del(this.id)" class="delbtn" id="tsk4">
-          Delete
-        </button>
-      </li>
-    </ul>
-    <script src="todo.js"></script>
   </body>
 </html>
